@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 
-dotenv.config()
+dotenv.config();
 
 app.use(express.json());
 
@@ -14,6 +14,7 @@ app.get("/list", (req, res) => {
 
 app.put("/list", (req, res) => {
   list = req.body;
+  res.json(list);
 });
 
 const port = process.env.PORT;
